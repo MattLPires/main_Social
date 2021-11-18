@@ -18,14 +18,11 @@ export default function Profile() {
                         </div>
                         <div className="profileInfo">
                             <h4 className="profileInfoName">Matheus Pires</h4>
-                            <span className="profileCourse">Análise e Desenvolvimento de Sistemas</span>
-                            <span className="profileSemester">5°Semestre</span>
-                            <span className="profileEmail">matheus.pires5@fatec.sp.gov.br</span>
                         </div>
                     </div>
                     <div className="profileRightBottom">
                         <Feed />
-                        <Rightbar />
+                        <Rightbar profile />
                     </div>
                 </div>
             </div>

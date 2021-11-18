@@ -36,6 +36,12 @@
     align-items: center;
     justify-content: center;
 }
+
+.profileInfoName {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
 .profileRightBottom {
     display: flex;
 }
