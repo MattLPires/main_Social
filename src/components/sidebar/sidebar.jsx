@@ -1,5 +1,7 @@
 import "./sidebar.css"
 import { RssFeed, School, Event, Work, Chat, PlaylistPlay, Folder } from "@material-ui/icons"
+import {Users} from "../../dummyData";
+import CloseFriend from "../closeFriend/CloseFriend";
 
 
 export default function Sidebar() {
@@ -42,14 +44,9 @@ export default function Sidebar() {
                 </button>
                 <hr className="sidebarHr" />
                 <ul className="sidebarFriendList">
-                    <li className="sidebarFriend">
-                        <img className ="sidebarFriendImg" src="/assets/person/2.jpg" alt="" />
-                        <span className="sidevarFriendName">Gustavo Pereira</span>
-                    </li>
-                    <li className="sidebarFriend">
-                        <img className ="sidebarFriendImg" src="/assets/person/3.jpg" alt="" />
-                        <span className="sidevarFriendName">Nicolas Almeida Pereira</span>
-                    </li>
+                   {Users.map(u =>(
+                    <CloseFriend key={u.id} user={u}/>
+                   ))}
                 </ul>
             </div>
         </div>

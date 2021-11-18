@@ -1,5 +1,5 @@
 import "./share.css"
-import {PermMedia} from "@material-ui/icons"
+import { PermMedia } from "@material-ui/icons"
 
 export default function Share() {
     return (
@@ -13,7 +13,7 @@ export default function Share() {
                 <div className="shareBottom">
                     <div className="shareOptions">
                         <div className="shareOption">
-                            <PermMedia htmlColor="tomato" className="shareIcon"/>
+                            <PermMedia htmlColor="tomato" className="shareIcon" />
                             <span className="shareOptionText">Foto ou Vídeo</span>
                         </div>
                     </div>
