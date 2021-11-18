@@ -1,5 +1,5 @@
 import "./post.css"
-import { CopyrightTwoTone, MoreVert } from "@material-ui/icons"
+import { MoreVert } from "@material-ui/icons"
 import { Users } from "../../dummyData"
 import { useState } from "react"
 
