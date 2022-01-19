@@ -42,11 +42,11 @@ export const Users = [
     
 ];
   
-  export const Posts = [
+  export const WorkPosts = [
     {
       id: 1,
-      desc: "Chave",
-      photo: "posts/1.jpeg",
+      desc: "Para mais detalhes, acesse: https://carreiras.itau.com.br/vaga/sao-paulo/analista-de-seguranca-da-informacao-junior ",
+      photo: "posts/itau.JPG",
       date: "5 mins ago",
       userId: 1,
       like: 32,

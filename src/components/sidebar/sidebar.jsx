@@ -2,7 +2,7 @@ import "./sidebar.css"
 import { RssFeed, School, Event, Work, Chat, PlaylistPlay, Folder } from "@material-ui/icons"
 import {Users} from "../../dummyData";
 import CloseFriend from "../closeFriend/CloseFriend";
-
+import {Link} from "react-router-dom";
 
 export default function Sidebar() {
     return (
@@ -22,8 +22,10 @@ export default function Sidebar() {
                         <span className="sidebarListItemText">Arquivos</span>
                     </li>
                     <li className="sidebarListItem">
+                        <Link to = "/work" style={{textDecoration:"none"}}>
                         <Work className="sidebarIcon" />
                         <span className="sidebarListItemText">Empregos</span>
+                        </Link>
                     </li>
                     <li className="sidebarListItem">
                         <Event className="sidebarIcon" />

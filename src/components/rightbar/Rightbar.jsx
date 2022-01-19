@@ -4,8 +4,9 @@ import Online from "../online/Online";
 
 
 
-export default function Rightbar({ profile }) {
+export default function Rightbar({ user }) {
 
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
     const HomeRightbar = () => {
         return (
             <>
@@ -30,40 +31,40 @@ export default function Rightbar({ profile }) {
             <div className="rightbarInfo">
                 <div className="rightbarInfoItem">
                     <span className="rightbarInfoKey">Curso:</span>
-                    <span className="rightbarInfoValue">Análise e Desenvolvimento de Sistemas</span>
+                    <span className="rightbarInfoValue">{user.course}</span>
                 </div>
                 <div className="rightbarInfoItem">
-                    <span className="rightbarInfoKey">Semestre:</span>
-                    <span className="rightbarInfoValue">5° Semestre</span>
+                    <span className="rightbarInfoKey">Cidade:</span>
+                    <span className="rightbarInfoValue">{user.city}</span>
                 </div><div className="rightbarInfoItem">
                     <span className="rightbarInfoKey">E-mail:</span>
-                    <span className="rightbarInfoValue">matheus.h98@hotmail.com.br</span>
+                    <span className="rightbarInfoValue">{user.email}</span>
                 </div>
             </div>
             <h4 className="rightbarTitle">Amigos</h4>
             <div className="rightbarFollowings">
                 <div className="rightbarFollowing">
-                    <img className="rightbarFollowingImg" src="assets/person/2.jpg" alt="" />
+                    <img className="rightbarFollowingImg" src={`${PF}person/2.jpg`} alt="" />
                     <span className="rightbarFollowingName">Gustavo Hokama</span>
                 </div>
                 <div className="rightbarFollowing">
-                    <img className="rightbarFollowingImg" src="assets/person/3.jpg" alt="" />
+                    <img className="rightbarFollowingImg" src={`${PF}person/3.jpg`} alt="" />
                     <span className="rightbarFollowingName">Nicolas Almeida</span>
                 </div>
                 <div className="rightbarFollowing">
-                    <img className="rightbarFollowingImg" src="assets/person/4.jpg" alt="" />
+                    <img className="rightbarFollowingImg" src={`${PF}person/4.jpg`} alt="" />
                     <span className="rightbarFollowingName">Deregay</span>
                 </div>
                 <div className="rightbarFollowing">
-                    <img className="rightbarFollowingImg" src="assets/person/5.jpg" alt="" />
+                    <img className="rightbarFollowingImg" src={`${PF}person/5.jpg`} alt="" />
                     <span className="rightbarFollowingName">Vector</span>
                 </div>
                 <div className="rightbarFollowing">
-                    <img className="rightbarFollowingImg" src="assets/person/6.jpg" alt="" />
+                    <img className="rightbarFollowingImg" src={`${PF}person/6.jpg`} alt="" />
                     <span className="rightbarFollowingName">Farinhas</span>
                 </div>
                 <div className="rightbarFollowing">
-                    <img className="rightbarFollowingImg" src="assets/person/8.JPG" alt="" />
+                    <img className="rightbarFollowingImg" src={`${PF}person/8.JPG`} alt="" />
                     <span className="rightbarFollowingName">Mel</span>
                 </div>
             </div>
@@ -73,7 +74,7 @@ export default function Rightbar({ profile }) {
     return (
         <div className="rightbar">
             <div className="rightbarWrapper">
-            {profile ? <ProfileRightbar /> : <HomeRightbar />}
+            {user ? <ProfileRightbar /> : <HomeRightbar />}
             </div>
         </div>
     )
